@@ -1,0 +1,57 @@
+```
+1st query
+```
+SELECT * FROM COUNTRYLANGUAGE
+WHERE LANGUAGE="Slovene";
+
+```
+2nd query
+```
+SELECT country_code, COUNT(*) AS "cities_in_country" 
+FROM cities 
+GROUP BY country_code 
+ORDER BY cities_in_country DESC LIMIT 20;
+
+```
+3rd query 
+```
+SELECT * FROM cities
+WHERE country_code="MEX" AND population > 500000
+ORDER BY population DESC LIMIT 100;
+
+```
+4th query
+```
+SELECT * FROM COUNTRYLANGUAGE
+WHERE percentage > 0.89
+ORDER BY percentage DESC LIMIT 100;
+
+```
+5th query
+```
+SELECT * FROM countries
+WHERE surface_area < 501
+AND population > 100000 LIMIT 100;
+
+```
+6th query
+```
+SELECT * FROM countries
+WHERE government_form="Constitutional Monarchy"
+AND capital > 200
+AND life_expectancy > 75; LIMIT 100;
+
+```
+7th query
+```
+SELECT * FROM cities 
+WHERE district="Buenos Aires" 
+AND population>500000 LIMIT 10;
+
+```
+8th query
+```
+SELECT region, COUNT(*) AS "countries"
+FROM countries
+GROUP BY region
+ORDER BY countries DESC;
